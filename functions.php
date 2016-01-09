@@ -88,7 +88,7 @@ add_action( 'after_setup_theme', 'sangeet_setup' );
  * @global int $content_width
  */
 function sangeet_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'sangeet_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'sangeet_content_width', 600 );
 }
 add_action( 'after_setup_theme', 'sangeet_content_width', 0 );
 
