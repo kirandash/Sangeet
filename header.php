@@ -31,13 +31,6 @@
             echo '<header id="masthead" class="site-header" role="banner">';
         }
     ?>
-        <?php 
-            if ( get_header_image() && !('blank' == get_header_textcolor()) ) { 
-                echo '<div class="site-branding header-background-image" style="background-image: url(' . get_header_image() . ')">'; 
-            } else {
-                echo '';
-            }
-        ?>
 		<div class="site-branding">
         	<?php
 			if ( is_front_page() && is_home() ) : ?>

@@ -569,11 +569,10 @@ a:active {
 	float: left;
 	width: 100%;
 	position: relative;
-	
+	background: #313131;
 }
 
 .main-navigation ul {
-	display: none;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
@@ -587,19 +586,22 @@ a:active {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	padding: 0.8em 1em;
+    text-decoration: none;
 }
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
-	top: 1.5em;
-	left: -999em;
+	padding: 0;
+	left: 0;
 	z-index: 99999;
+	background: #444;
 }
 
 .main-navigation ul ul ul {
-	left: -999em;
+	left: 100%;
 	top: 0;
 }
 
@@ -613,6 +615,8 @@ a:active {
 
 .main-navigation li:hover > a,
 .main-navigation li.focus > a {
+	color: #fff;
+	background: #4d4d4d;
 }
 
 .main-navigation ul ul :hover > a,
@@ -621,11 +625,12 @@ a:active {
 
 .main-navigation ul ul a:hover,
 .main-navigation ul ul a.focus {
+	background: #313131;
 }
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-	left: auto;
+	display: block;
 }
 
 .main-navigation ul ul li:hover > ul,
@@ -637,6 +642,8 @@ a:active {
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
+    background: white;
+	text-shadow: none;
 }
 
 /* Small menu. */
