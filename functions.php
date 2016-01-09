@@ -115,6 +115,11 @@ add_action( 'widgets_init', 'sangeet_widgets_init' );
  */
 function sangeet_scripts() {
 	wp_enqueue_style( 'sangeet-style', get_stylesheet_uri() );
+	
+	wp_enqueue_style( 'sangeet-google-fonts', 'https://fonts.googleapis.com/css?family=Oswald:400,700,300' );
+	          
+	// FontAwesome
+	wp_enqueue_style('sangeet_fontawesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css');
 
 	wp_enqueue_script( 'sangeet-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
