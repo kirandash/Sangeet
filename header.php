@@ -62,6 +62,11 @@
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
+        
+        <div class="search-toggle">
+            <i class="fa fa-search"></i>
+            <a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'my-simone' ); ?></a>
+        </div>
 
 	</header><!-- #masthead -->
 
