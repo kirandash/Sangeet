@@ -24,31 +24,33 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sangeet' ); ?></a>
 
-	<?php 
-        if ( get_header_image() && !('blank' == get_header_textcolor()) ) { 
-            echo '<header id="masthead" class="site-header header-background-image" role="banner"  style="background-image: url(' . get_header_image() . ')">'; 
-        } else {
-            echo '<header id="masthead" class="site-header" role="banner">';
-        }
-    ?>
-		<div class="site-branding">
-        	<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
+	<header id="masthead" class="site-header" role="banner">
+        <?php 
+            if ( get_header_image() && !('blank' == get_header_textcolor()) ) { 
+                echo '<div class="site-branding header-background-image" style="background-image: url(' . get_header_image() . ')">'; 
+            } else {
+                echo '<div class="site-branding">';
+            }
+        ?>
+			<div class="title-box">
+				<?php
+                if ( is_front_page() && is_home() ) : ?>
+                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                <?php else : ?>
+                    <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+                <?php
+                endif;
+    
+                $description = get_bloginfo( 'description', 'display' );
+                if ( $description || is_customize_preview() ) : ?>
+                    <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+                <?php
+                endif; ?>
+            </div>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'sangeet' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
