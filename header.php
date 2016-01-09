@@ -47,6 +47,9 @@
                 <?php
                 endif; ?>
             </div>
+            
+            <?php sangeet_social_menu(); ?>
+            
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
