@@ -981,7 +981,46 @@ a:active {
     color: #fff;
     color: hsl(0, 0%, 100%);
 }
-                    
+
+/* Header search */
+
+input[type="search"] {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.search-box-wrapper {
+    position: absolute;
+	top: 0px;
+	bottom:0px;
+	width:100%;
+	background: #4d4d4d;
+	z-index: 2;
+    width: 100%;
+}
+
+.search-box {
+    padding: 1em;
+	text-align:center;
+	position:absolute;
+	top:50%;
+	width:100%;
+}
+
+.search-box .search-field {
+    max-width: 362px;
+    padding: 1rem 2rem 1rem 4rem;
+    font-size: 20px;
+    font-size: 2rem;
+    border: 0;
+}
+
+.error404 .search-submit,
+.search .search-submit,
+.search-box .search-submit { 
+    display: none; 
+}
+                  
 /* Header responsive */
 @media screen and (max-width: 600px) {
     .site-branding { padding: 0; }

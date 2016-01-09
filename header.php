@@ -24,6 +24,12 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sangeet' ); ?></a>
 
+	<div id="search-container" class="search-box-wrapper clear">
+        <div class="search-box clear">
+            <?php get_search_form(); ?>
+        </div>
+    </div> 
+            
 	<header id="masthead" class="site-header" role="banner">
         <?php 
             if ( get_header_image() && !('blank' == get_header_textcolor()) ) { 
@@ -56,6 +62,7 @@
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
