@@ -986,6 +986,7 @@ a:active {
 
 .search-toggle {
 	position: absolute;
+	z-index:3;
     left: 1rem;
 	top:1rem;
     padding: 12px;
@@ -996,7 +997,7 @@ a:active {
 
 .search-toggle:hover,
 .search-toggle.active {
-    background: #4d4d4d;
+    background: rgba(56,184,131,0.9);
 }
 
 input[type="search"] {
@@ -1009,9 +1010,10 @@ input[type="search"] {
 	top: 0px;
 	bottom:0px;
 	width:100%;
-	background: #4d4d4d;
+	background: rgba(56,184,131,0.9);
 	z-index: 2;
     width: 100%;
+	display: none;
 }
 
 .search-box {
@@ -1028,6 +1030,12 @@ input[type="search"] {
     font-size: 20px;
     font-size: 2rem;
     border: 0;
+	background:transparent;
+	border-bottom:1px solid #fff;
+}
+
+.search-box .search-field:focus {
+	outline:none;	
 }
 
 .error404 .search-submit,
