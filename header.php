@@ -24,23 +24,22 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sangeet' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		
-		<?php if ( get_header_image() && ('blank' == get_header_textcolor()) ) { ?>
-            <figure class="header-image">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        <img src="<?php header_image(); ?>" width="< ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-                </a>
-            </figure>
-        <?php } // End header image check. ?>
+	<?php 
+        if ( get_header_image() && !('blank' == get_header_textcolor()) ) { 
+            echo '<header id="masthead" class="site-header header-background-image" role="banner"  style="background-image: url(' . get_header_image() . ')">'; 
+        } else {
+            echo '<header id="masthead" class="site-header" role="banner">';
+        }
+    ?>
         <?php 
             if ( get_header_image() && !('blank' == get_header_textcolor()) ) { 
                 echo '<div class="site-branding header-background-image" style="background-image: url(' . get_header_image() . ')">'; 
             } else {
-                echo '<div class="site-branding">';
+                echo '';
             }
         ?>
-			<?php
+		<div class="site-branding">
+        	<?php
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>

@@ -568,6 +568,8 @@ a:active {
 	display: block;
 	float: left;
 	width: 100%;
+	position: relative;
+	
 }
 
 .main-navigation ul {
