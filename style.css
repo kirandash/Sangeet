@@ -763,8 +763,13 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-# Widgets
+# Header
 --------------------------------------------------------------*/
+.header-image img {
+    display: block;
+    margin: 0 auto;
+}
+
 .site-branding {
     padding: 3rem 0;
     text-align: center;
@@ -804,6 +809,10 @@ a:active {
 .widget {
 	margin: 0 0 1.5em;
 }
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
 
 /* Make sure select elements fit in widgets. */
 .widget select {
