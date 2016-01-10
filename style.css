@@ -521,7 +521,8 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
+textarea,
+select {
     padding: 8px;
     color: #ccc;
     border: 1px solid #353535;
@@ -594,7 +595,6 @@ a:active {
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
 	display:none;
@@ -1195,7 +1195,7 @@ input[type="search"] {
 }
 
 .widget_nav_menu li,
-.widget_pages li { padding-top: 0; }
+.widget_pages li { padding-top: 0; margin:0;}
 
 .widget_rss li { margin-bottom: .5em; }
 
