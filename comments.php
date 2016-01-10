@@ -40,8 +40,8 @@ if ( post_password_required() ) {
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'sangeet' ); ?></h2>
 			<div class="nav-links">
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'sangeet' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'sangeet' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( '<i class="fa fa-arrow-circle-o-left"></i> Older Comments', 'sangeet' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments <i class="fa fa-arrow-circle-o-right"></i>', 'sangeet' ) ); ?></div>
 
 			</div><!-- .nav-links -->
 		</nav><!-- #comment-nav-above -->

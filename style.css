@@ -784,6 +784,17 @@ a:active {
     border-top: hsl(0, 0%, 80%) solid 1px;
     border-bottom: hsl(0, 0%, 80%) solid 1px; 
 }
+
+.comment-navigation {
+    padding: 1em 0;
+    margin: 3em 0;
+    border-top: #fff solid 1px;
+    border-bottom: #fff solid 1px;  
+}
+
+.comment-navigation i {
+    margin: 0 1em;
+}
   
 /* Social Menu */
 
