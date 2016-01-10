@@ -39,6 +39,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Asides
 	## Comments
 # Infinite scroll
+# Footer
 # Media
 	## Captions
 	## Galleries
@@ -1049,17 +1050,63 @@ input[type="search"] {
     .site-branding { padding: 0; }
 }
 
-.widget {
-	margin: 0 0 1.5em;
-}
-
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
+.widget {
+    margin: 0 0 4em;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+.widget-title {
+    margin-bottom: 1em;    
+    font-size: 24px;
+    font-size: 2.4rem;
+    border-bottom: 2px solid #000;    
+}
+
+.widget a {
+    font-weight: 700;
+    color: #000;
+}
+
+.widget ul,
+.widget ol {
+    padding: 0;
+    margin: -1em 0 0;
+    list-style-type: none;
+}
+
+.widget li { padding: 1em 0 0; }
+
+.widget li ul,
+.widget li ol { margin-top: 0; }
+
+.widget li li { margin-left: 1.5em; }
 
 /* Make sure select elements fit in widgets. */
 .widget select {
 	max-width: 100%;
+}
+
+/* Search widget */
+.widget_search .search-submit {
+	display: none;
+}
+
+.footer-widgets { margin: 0 auto; }
+
+.footer-widgets .widget-title,
+.footer-widgets .widget a:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.footer-widgets .widget {
+    float: left;
+    width: 320px;
+    margin: 0 4rem 8rem 4rem;
 }
 
 /*--------------------------------------------------------------
@@ -1131,26 +1178,7 @@ input[type="search"] {
 }
 
 /*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
-}
-
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-	max-width: 100%;
-}
-
-/*--------------------------------------------------------------
- Footer
+# Footer
 --------------------------------------------------------------*/
 
 .site-footer {
@@ -1167,6 +1195,25 @@ object {
 
 .site-info { 
     text-align: center; 
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
 }
 
 /*--------------------------------------------------------------
