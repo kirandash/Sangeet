@@ -38,6 +38,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Posts and pages
 	## Asides
 	## Comments
+	## Index and Archive
 # Infinite scroll
 # Footer
 # Media
@@ -1654,7 +1655,16 @@ ol.children { list-style-type: none; }
     background: #84bd68;
     background: hsl(100, 39%, 57%);
 }
-                
+   
+/*--------------------------------------------------------------
+## Index and Archive
+--------------------------------------------------------------*/      
+.sticky-post {
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+}
+	            
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

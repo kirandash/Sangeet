@@ -37,6 +37,9 @@
                     the_title( '<h1 class="entry-title">', '</h1>' );
                 } else {
                     the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+					if (is_sticky()) {
+    					echo '<i class="fa fa-thumb-tack sticky-post"></i>';
+					}
                 }
     
             if ( 'post' === get_post_type() ) : ?>
