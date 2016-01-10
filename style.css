@@ -1350,6 +1350,41 @@ input[type="search"] {
 	margin: 0 0 1.5em;
 }
 
+.posted-on, .byline, .cat-links, .tags-links, .edit-link {
+	display: inline-block;
+    vertical-align: top;
+    margin: 0 1em;
+}
+
+.posted-on:before, .byline:before, .cat-links:before, .tags-links:before, .edit-link:before {
+    padding-top: 2px;
+    font-family: 'fontawesome';
+    font-size: 14px;
+    font-size: 1.4rem;
+    color: #38b883;
+    margin-right: 0.5em;
+}
+
+.posted-on:before {
+	content: '\f073';	
+}
+
+.byline:before {
+	content: '\f007';	
+}
+
+.cat-links:before {
+	content: '\f07c';		
+}
+
+.tags-links:before {
+	content: '\f02c';		
+}
+
+.edit-link:before {
+	content: '\f14b';		
+}
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
