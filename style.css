@@ -1567,6 +1567,14 @@ ol.children { list-style-type: none; }
 	display: block;
 }
 
+.bypostauthor > .comment-body {
+    position: relative;
+    padding: 1em;
+    margin-bottom: 2em;
+    background: #333;
+    border: none;
+}
+
 .reply {
     font-weight: 700;
     font-size: 14px;
