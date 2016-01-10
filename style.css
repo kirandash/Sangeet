@@ -1678,6 +1678,18 @@ object {
 	max-width: 100%;
 }
 
+
+/* Featured Images */
+
+.single-post-thumbnail { 
+    background: #38b883; 
+}
+
+.single-post-thumbnail img {
+    display: block;
+    margin: 0 auto;
+}
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
