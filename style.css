@@ -1553,12 +1553,14 @@ object {
 
 .wp-caption img[class*="wp-image-"] {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+	padding: 0.8075em 0;
+    font-size: 14px;
+    font-size: 1.4rem;
+    background: #333;
 }
 
 .wp-caption-text {
