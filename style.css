@@ -1109,7 +1109,7 @@ input[type="search"] {
     margin: 0 4rem 8rem 4rem;
 }
 
-.widget li:before {
+.widget_meta li:before, .widget_recent_entries li:before, .widget_recent_comments li:before, .widget_archive li:before, .widget_categories li:before  {
     display: block;
     float: left;
     padding-top: 2px;
@@ -1117,11 +1117,10 @@ input[type="search"] {
     font-family: 'fontawesome';
     font-size: 14px;
     font-size: 1.4rem;
+	content: "\f001";
 } 
 
 .widget li { margin: 0 0 .5em 2.5em; }
-
-.widget li:before { content: "\f001"; }
 
 .widget_nav_menu a,
 .widget_pages a {

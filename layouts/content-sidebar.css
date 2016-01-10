@@ -15,9 +15,14 @@
 }
 
 .site-main {
-	margin: 0 25% 0 0;
+	margin: 0;
 	padding:2rem;
 }
+.content-area {
+	float:left;
+	width:75%;	
+}
+
 .site-content .widget-area {
 	float: right;
 	overflow: hidden;
@@ -43,40 +48,8 @@
     margin: 0 auto;
 }
 
-@media screen and (min-width: 1540px) {
-    .content-area {
-        float: left;
-        width: 100%;
-        margin-right: -25%;
-    }
-}
-
-@media screen and (min-width: 1160px) and (max-width: 1539px) {
-    .content-area {
-        width: 100%;
-        float: left;
-        margin-left: -25%;
-        padding-left: 25%;
-    }
-    
-    .entry-header,
-    .entry-content,
-    .entry-meta,
-    .entry-footer,
-    .tag-links,
-    .post-navigation,
-    .comments-area,
-    .paging-navigation { 
-        margin-right: 0; 
-    }
-    
-}
-
-@media screen and (max-width: 1159px) {  
-    .site-content .widget-area {
-        width: auto;
-        max-width: 780px;
-        float: none;
-        margin: 1em auto 0;
-    }
+@media screen and (max-width: 600px) {  
+.site-content .content-area, .site-content .widget-area {
+	float:none;
+	width:100%;	
 }
