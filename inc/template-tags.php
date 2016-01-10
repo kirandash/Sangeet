@@ -63,6 +63,7 @@ function sangeet_entry_footer() {
 		echo '<span class="comments-link">';
 		comments_popup_link( esc_html__( 'Leave a comment', 'sangeet' ), esc_html__( '1 Comment', 'sangeet' ), esc_html__( '% Comments', 'sangeet' ) );
 		echo '</span>';
+		
 	}
 
 	edit_post_link(
@@ -74,6 +75,10 @@ function sangeet_entry_footer() {
 		'<span class="edit-link">',
 		'</span>'
 	);
+	
+	if ( ! is_single() ) {
+		echo '<span class="continue-reading"><a href="' . get_permalink() . '" title="' . __('Continue Reading ', 'sangeet') . get_the_title() . '" rel="bookmark">Continue Reading</a></span>';	
+	}
 }
 endif;
 

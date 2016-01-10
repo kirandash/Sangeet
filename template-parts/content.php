@@ -60,7 +60,7 @@
 				
             ?>
         </div><!-- .entry-content -->
-    
+    	
         <footer class="entry-footer">
             <?php sangeet_entry_footer(); ?>
         </footer><!-- .entry-footer -->

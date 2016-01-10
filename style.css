@@ -1391,13 +1391,13 @@ input[type="search"] {
 	margin: 0 0 1.5em;
 }
 
-.posted-on, .byline, .cat-links, .tags-links, .edit-link {
+.posted-on, .byline, .cat-links, .tags-links, .edit-link, .continue-reading {
 	display: inline-block;
     vertical-align: top;
     margin: 0 1em;
 }
 
-.posted-on:before, .byline:before, .cat-links:before, .tags-links:before, .edit-link:before {
+.posted-on:before, .byline:before, .cat-links:before, .tags-links:before, .edit-link:before, .continue-reading:before {
     padding-top: 2px;
     font-family: 'fontawesome';
     font-size: 14px;
@@ -1424,6 +1424,10 @@ input[type="search"] {
 
 .edit-link:before {
 	content: '\f14b';		
+}
+
+.continue-reading:before {
+	content: '\f138';	
 }
 
 /* Blockquotes */
