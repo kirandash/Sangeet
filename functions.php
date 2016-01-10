@@ -16,6 +16,10 @@ if ( ! function_exists( 'sangeet_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function sangeet_setup() {
+	// This theme styles the visual editor to resemble the theme style.
+	$font_url = 'https://fonts.googleapis.com/css?family=Oswald:400,700,300';
+	add_editor_style( array( 'inc/editor-style.css', str_replace( ',', '%2C', $font_url ) ) );
+	
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
