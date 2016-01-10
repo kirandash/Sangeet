@@ -19,8 +19,12 @@
 			echo '</div>';
 			echo '</div>';
 		}
+	
+    if ( !is_single() ): 
+	
 	?>
     <div class="index-box">
+    <?php endif; ?>
         <header class="entry-header">
             <?php
                 if ( is_single() ) {
@@ -39,8 +43,10 @@
     
 
         <div class="entry-content">
-            <?php
-                the_content( sprintf(
+            <?php the_excerpt();
+                
+				if( is_single() ): 
+				the_content( sprintf(
                     /* translators: %s: Name of current post. */
                     wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'sangeet' ), array( 'span' => array( 'class' => array() ) ) ),
                     the_title( '<span class="screen-reader-text">"', '"</span>', false )
@@ -50,6 +56,8 @@
                     'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sangeet' ),
                     'after'  => '</div>',
                 ) );
+				endif;
+				
             ?>
         </div><!-- .entry-content -->
     
@@ -57,5 +65,7 @@
             <?php sangeet_entry_footer(); ?>
         </footer><!-- .entry-footer -->
     
+    <?php if ( !is_single() ): ?>
     </div>
+    <?php endif; ?>
 </article><!-- #post-## -->
