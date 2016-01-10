@@ -1663,6 +1663,14 @@ ol.children { list-style-type: none; }
     top: 1rem;
     right: 3rem;
 }
+
+.taxonomy-description {
+    padding-top: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    border-top: 1px solid hsl(0, 0%, 75%);
+    border-bottom: 1px solid hsl(0, 0%, 75%);
+}
 	            
 /*--------------------------------------------------------------
 # Infinite scroll
