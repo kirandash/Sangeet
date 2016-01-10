@@ -519,7 +519,8 @@ input[type="week"],
 input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
-input[type="color"] {
+input[type="color"],
+textarea {
     padding: 8px;
     color: #ccc;
     border: 1px solid #353535;
@@ -749,23 +750,23 @@ a:active {
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {
-        font-size: 18px;
-        font-size: 1.8rem;
-        color: #fff;
+	font-size: 18px;
+	font-size: 1.8rem;
+	color: #fff;
 }
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous {
 	width: 50%;
-        float: left;
-        padding-right: 15%;
+	float: left;
+	padding-right: 15%;
 }
 .comment-navigation .nav-next,
 .paging-navigation .nav-next,
 .post-navigation .nav-next {
-        width: 50%;	
-        float: right;
-        padding-left: 15%;
+	width: 50%;	
+	float: right;
+	padding-left: 15%;
 	text-align: right;
 }
 
@@ -1571,7 +1572,7 @@ ol.children { list-style-type: none; }
     position: relative;
     padding: 1em;
     margin-bottom: 2em;
-    background: #333;
+    background: #606060;
     border: none;
 }
 
@@ -1591,6 +1592,39 @@ ol.children { list-style-type: none; }
     .reply { margin-left: 0; }
 }
 
+.comment-reply-title {
+    margin-bottom: .5em;
+    font-weight: 900;
+    font-size: 30px;
+    font-size: 3rem;
+}
+
+.comment-form {
+    padding-bottom: 4rem;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+.comment-form textarea {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.comment-form label { display: block; }
+
+.required { color: red; }
+
+.comment-awaiting-moderation { 
+    padding: .5rem 1rem;
+    margin: 1rem 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: #fff;
+    color: hsl(0, 0%, 100%);
+    background: #84bd68;
+    background: hsl(100, 39%, 57%);
+}
+                
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -1661,7 +1695,7 @@ object {
 	padding: 0.8075em 0;
     font-size: 14px;
     font-size: 1.4rem;
-    background: #333;
+    background: #606060;
 }
 
 .wp-caption-text {
@@ -1678,7 +1712,7 @@ object {
     float: left;
     margin-right: 3.333333333%;
     margin-bottom: 3rem;
-    background: #333;
+    background: #606060;
     overflow: hidden;
 }
 .gallery-caption {
@@ -1693,7 +1727,7 @@ object {
     line-height: 1.5;
     color: #fff;
     text-align: left;
-    background-color: #333;
+    background-color: #606060;
     opacity: 0;
 }
 .gallery-item:hover .gallery-caption { 
