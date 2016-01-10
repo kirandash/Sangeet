@@ -1384,6 +1384,80 @@ input[type="search"] {
 	content: '\f14b';		
 }
 
+/* Blockquotes */
+blockquote {
+    padding: 1em 0 1em 1.5em;
+    margin-bottom: 1em;
+    font-style: italic;
+	position:relative;
+}
+
+blockquote:before, blockquote:after {
+	position:absolute;
+	font-family: 'Fontawesome';
+    font-size: 20px;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    content: '\f0c0';
+}
+
+blockquote:before {
+	top:0;
+	left:0;
+    content: '\f10d';
+}
+
+
+blockquote:after {
+	bottom: 0;
+	right:0;
+	content: '\f10e';
+}
+
+blockquote em { 
+    font-style: normal; 
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 1em;
+    margin-left: 40%;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-style: normal;
+    line-height: 1.5em;
+    text-align: right;
+}
+
+blockquote.alignleft {
+    width: 50%;
+    float: left;
+    padding: 1em 0 0;
+    margin-right: 2em;
+}
+
+blockquote.alignright {
+    width: 50%;
+    float: right;
+    padding: 1em 0 0;
+    margin-left: 2em;
+}
+
+/* Blockquotes responsive */
+/* Optional rules that set blockquotes to full width on smaller screens */
+@media screen and (max-width: 780px) {
+    blockquote.alignleft,
+    blockquote.alignright { width: 40%; }
+}
+
+@media screen and (max-width:600px) {
+    blockquote.alignleft,
+    blockquote.alignright {
+        width: 100%;
+        padding: 1em 1.5em 0;   
+    }
+}
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
