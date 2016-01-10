@@ -867,6 +867,28 @@ a:active {
     }
 }
 
+.paging-navigation ul {
+    margin: 0;
+	padding: 0;
+}
+
+.paging-navigation li { display: inline; }
+
+a.page-numbers,
+span.page-numbers {
+     padding: .3em .7em;
+     color: #38b883;
+}
+
+a:hover.page-numbers {
+    color: #fff;
+}
+
+.paging-navigation .current {
+    font-weight: bold;
+    color: #38b883;
+}
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -1391,13 +1413,13 @@ input[type="search"] {
 	margin: 0 0 1.5em;
 }
 
-.posted-on, .byline, .cat-links, .tags-links, .edit-link, .continue-reading {
+.posted-on, .byline, .cat-links, .tags-links, .comments-link, .edit-link, .continue-reading {
 	display: inline-block;
     vertical-align: top;
-    margin: 0 1em;
+    margin: 0 1em 0 0;
 }
 
-.posted-on:before, .byline:before, .cat-links:before, .tags-links:before, .edit-link:before, .continue-reading:before {
+.posted-on:before, .byline:before, .cat-links:before, .tags-links:before, .comments-link:before, .edit-link:before, .continue-reading:before {
     padding-top: 2px;
     font-family: 'fontawesome';
     font-size: 14px;
@@ -1420,6 +1442,10 @@ input[type="search"] {
 
 .tags-links:before {
 	content: '\f02c';		
+}
+
+.comments-link:before {
+	content: '\f086';	
 }
 
 .edit-link:before {
@@ -1692,6 +1718,11 @@ object {
 .single-post-thumbnail img {
     display: block;
     margin: 0 auto;
+}
+
+.small-index-thumbnail { 
+    margin-top: -1em;
+    margin-bottom: 1em;
 }
 
 /*--------------------------------------------------------------

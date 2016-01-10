@@ -12,19 +12,25 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
     <?php 
-		if ( is_single() && has_post_thumbnail() ) {
-			echo '<div class="single-post-thumbnail clear">';
-			echo '<div class="image-shifter">';
-			echo the_post_thumbnail('large-thumb');
-			echo '</div>';
+	if ( is_single() && has_post_thumbnail() ) {
+		echo '<div class="single-post-thumbnail clear">';
+		echo '<div class="image-shifter">';
+		echo the_post_thumbnail('large-thumb');
+		echo '</div>';
+		echo '</div>';
+	}
+	
+    if ( !is_single() ) {
+    	echo '<div class="index-box">';
+		if ( has_post_thumbnail()) {
+			echo '<div class="small-index-thumbnail clear">';
+			echo '<a href="' . get_permalink() . '" title="' . __('Read ', 'sangeet') . get_the_title() . '" rel="bookmark">';
+			echo the_post_thumbnail('index-thumb');
+			echo '</a>';
 			echo '</div>';
 		}
-	
-    if ( !is_single() ): 
-	
+	}
 	?>
-    <div class="index-box">
-    <?php endif; ?>
         <header class="entry-header">
             <?php
                 if ( is_single() ) {
