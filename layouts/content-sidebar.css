@@ -6,6 +6,14 @@
  * Learn more: https://developer.wordpress.org/themes/basics/template-files/
 */
 
+.site-content {
+    padding-bottom: 4em;
+}
+.single .site-content,
+.page .site-content { 
+    background: #000; 
+}
+
 .site-main {
 	margin: 0 25% 0 0;
 	padding:2rem;
@@ -14,6 +22,7 @@
 	float: right;
 	overflow: hidden;
 	width: 25%;
+	padding:2rem;
 }
 .site-footer {
 	clear: both;
