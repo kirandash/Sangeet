@@ -1222,6 +1222,11 @@ input[type="search"] {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+
+.page .entry-title {
+    margin-top: .7em;
+}
+
 /* Typography */
 .entry-title {
     margin: 0 0 2rem;
