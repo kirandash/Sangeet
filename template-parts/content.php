@@ -24,7 +24,7 @@
     	echo '<div class="index-box">';
 		if ( has_post_thumbnail()) {
 			echo '<div class="small-index-thumbnail clear">';
-			echo '<a href="' . get_permalink() . '" title="' . __('Read ', 'sangeet') . get_the_title() . '" rel="bookmark">';
+			echo '<a href="' . esc_url(get_permalink()) . '" title="' . __('Read ', 'sangeet') . get_the_title() . '" rel="bookmark">';
 			echo the_post_thumbnail('index-thumb');
 			echo '</a>';
 			echo '</div>';

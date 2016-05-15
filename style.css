@@ -1,14 +1,14 @@
 /*
-Theme Name: sangeet
-Theme URI: http://bgwebagency.com/themes/sangeet
-Author: Kiran Kumar Dash
-Author URI: http://bgwebagency.com/kiran
-Description: Description
+Theme Name: Sangeet
+Theme URI: http://bgwebagency.com/wordpress-themes/sangeet
+Author: BG Web Agency
+Author URI: http://bgwebagency.com
+Description: Sangeet is a theme built with an essence of music in it. Sangeet is a theme for music lovers who want to create a blog for themselves or the people who would like to give their website a touch of music.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: sangeet
-Tags:
+Tags: white, black, green, one-column, two-columns, right-sidebar, responsive-layout, custom-header, custom-menu, editor-style, featured-images, post-formats, sticky-post, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -51,7 +51,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 html {
 	font-size: 62.5%; 
-	overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
+	overflow-y: scroll;
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
@@ -360,12 +360,12 @@ html {
 
 *,
 *:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*:after { 
 	box-sizing: inherit;
 }
 
 body {
-	background: #444 url(images/bodybg.png); /* Fallback for when there is no custom background color defined. */
+	background: #444 url(images/bodybg.png);
 }
 
 blockquote:before,
@@ -415,8 +415,8 @@ dd {
 }
 
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+	height: auto; 
+	max-width: 100%; 
 }
 
 table {
@@ -439,8 +439,8 @@ input[type="submit"] {
     color: #fff;
     border: 1px solid #fff;
 	background:transparent;
-    cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
-    -webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+    cursor: pointer; 
+    -webkit-appearance: button; 
 }
 
 button:hover,
@@ -666,7 +666,6 @@ a:active {
 		display: block;
 		border-top: 1px solid;
 		border-top-color: #fff;
-		border-top-color: hsla(0, 0%, 100%, .5);
 	}
 
 	.main-navigation ul {
@@ -692,7 +691,6 @@ a:active {
 
 	.main-navigation li:hover > a {
 		background: #313131;
-		background: hsl(0, 0%, 19%);
 	}
 	
 	.main-navigation ul ul,
@@ -703,7 +701,6 @@ a:active {
 		display: block;
 		float: none;
 		background: #313131;
-		background: hsl(0, 0%, 19%);
 	}
 	
 	.main-navigation ul ul a { width: 100%; }
@@ -711,7 +708,6 @@ a:active {
 	.main-navigation ul a:hover,
 	.main-navigation ul ul a:hover {
 		background: #4d4d4d;
-		background: hsl(0, 0%, 30%);
 	}
 
 	.main-navigation .current_page_ancestor { background: inherit; }
@@ -726,9 +722,7 @@ a:active {
 	.main-navigation .current_page_item li:hover,
 	.main-navigation .current_page_parent .current_page_item > a  {
 		color: #fff;
-		color: hsl(0, 0%, 100%);
-		background: #4d4d4d;
-		background: hsl(0, 0%, 30%);    
+		background: #4d4d4d;   
 	}
         
 } // End responsive menu
@@ -919,10 +913,9 @@ a:hover.page-numbers {
 	text-decoration: none;
 	top: 5px;
 	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
+	z-index: 100000; 
 }
 
-/* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
 	outline: 0;
 }
@@ -1150,7 +1143,6 @@ input[type="search"] {
 
 .widget li li { margin-left: 1.5em; }
 
-/* Make sure select elements fit in widgets. */
 .widget select {
 	max-width: 100%;
 }
@@ -1522,7 +1514,6 @@ blockquote.alignright {
 }
 
 /* Blockquotes responsive */
-/* Optional rules that set blockquotes to full width on smaller screens */
 @media screen and (max-width: 780px) {
     blockquote.alignleft,
     blockquote.alignright { width: 40%; }
@@ -1655,9 +1646,7 @@ ol.children { list-style-type: none; }
     font-size: 16px;
     font-size: 1.6rem;
     color: #fff;
-    color: hsl(0, 0%, 100%);
     background: #84bd68;
-    background: hsl(100, 39%, 57%);
 }
    
 /*--------------------------------------------------------------
@@ -1723,7 +1712,6 @@ ol.children { list-style-type: none; }
 	padding: 0;
 }
 
-/* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
 object {

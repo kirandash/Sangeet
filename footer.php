@@ -18,9 +18,11 @@
         <?php get_sidebar( 'footer' ); ?>
         
         <div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sangeet' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'sangeet' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'sangeet' ), 'sangeet', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			<?php
+			printf(
+				/* translators: %1$s = text link: sangeet, %2$s = text link: BG Web Agency, URL: http://bgwebagency.com */
+				__( 'Theme: %1$s by %2$s', 'sangeet' ), esc_attr( 'sangeet', 'sangeet' ),
+				'<a href="http://bgwebagency.com" rel="developer nofollow">' . esc_attr__( 'BG Web Agency', 'sangeet' ) . '</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
