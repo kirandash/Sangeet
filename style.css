@@ -1,20 +1,21 @@
 /*
 Theme Name: Sangeet
-Theme URI: http://bgwebagency.com/wordpress-themes/sangeet
+Theme URI: http://bgwebagency.com/free-wordpress-themes/sangeet-free-wordpress-theme/
 Author: BG Web Agency
 Author URI: http://bgwebagency.com
 Description: Sangeet is a theme built with an essence of music in it. Sangeet is a theme for music lovers who want to create a blog for themselves or the people who would like to give their website a touch of music.
-Version: 1.0.0
+Version: 1.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: sangeet
-Tags: white, black, green, one-column, two-columns, right-sidebar, responsive-layout, custom-header, custom-menu, editor-style, featured-images, post-formats, sticky-post, threaded-comments, translation-ready
+Tags: one-column, two-columns, right-sidebar, custom-header, custom-menu, editor-style, featured-images, post-formats, sticky-post, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
 sangeet is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
+sangeet WordPress Theme incorporates code from Simone WordPress Theme.
+sangeet is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -365,7 +366,7 @@ html {
 }
 
 body {
-	background: #444 url(images/bodybg.png);
+	background: #383838;
 }
 
 blockquote:before,

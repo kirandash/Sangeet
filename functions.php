@@ -28,6 +28,13 @@ function sangeet_setup() {
 	 */
 	load_theme_textdomain( 'sangeet', get_template_directory() . '/languages' );
 
+	// Add theme support for custom logo as it is required for wordPress 4.5 onwards.
+	add_theme_support( 'custom-logo', array(
+		'height'      => 100,
+		'width'       => 400,
+		'flex-width' => true,
+	) );
+	
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
@@ -45,8 +52,8 @@ function sangeet_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-	add_image_size('large-thumb', 1060, 650, true);
-	add_image_size('index-thumb', 780, 250, true);
+	add_image_size('sangeet-large-thumb', 1060, 650, true);
+	add_image_size('sangeet-index-thumb', 780, 250, true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -124,6 +131,40 @@ function sangeet_widgets_init() {
 add_action( 'widgets_init', 'sangeet_widgets_init' );
 
 /**
+ * Load Google Fonts
+ */
+function sangeet_fonts_url() {
+        $fonts_url = '';
+        $fonts     = array();
+        $subsets   = 'latin,latin-ext';
+
+        /* translators: If there are characters in your language that are not supported by Oswald, translate this to 'off'. Do not translate into your own language. */
+        if ( 'off' !== _x( 'on', 'Oswald font: on or off', 'sangeet' ) ) {
+                $fonts[] = 'Oswald:400,700,300';
+        }
+
+        if ( $fonts ) {
+                $fonts_url = add_query_arg( array(
+                        'family' => urlencode( implode( '|', $fonts ) ),
+                        'subset' => urlencode( $subsets ),
+                ), 'https://fonts.googleapis.com/css' );
+        }
+
+        return $fonts_url;
+}
+
+/**
+ * Sangeet Custom Logo ( Used function_exists() wrapper to maintain backwards compatibility with older versions of WordPress. )
+ */
+function sangeet_get_custom_logo() {
+	
+	if ( function_exists( 'get_custom_logo' ) ) {
+		return get_custom_logo();
+	}
+
+}
+
+/**
  * Enqueue scripts and styles.
  */
 function sangeet_scripts() {
@@ -135,22 +176,22 @@ function sangeet_scripts() {
 		wp_enqueue_style( 'sangeet-layout-style' , get_template_directory_uri() . '/layouts/content-sidebar.css');
 	}
 	
-	wp_enqueue_style( 'sangeet-google-fonts', 'https://fonts.googleapis.com/css?family=Oswald:400,700,300' );
+	wp_enqueue_style( 'google-fonts', sangeet_fonts_url() );
 	          
 	// FontAwesome
-	wp_enqueue_style('sangeet_fontawesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css');
+	wp_enqueue_style('fontawesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css');
 
-	wp_enqueue_script( 'sangeet-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20140328', true );
+	wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20140328', true );
 	
-	wp_enqueue_script( 'sangeet-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('sangeet-superfish'), '20140328', true );
+	wp_enqueue_script( 'superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('sangeet-superfish'), '20140328', true );
 	
 	wp_enqueue_script( 'sangeet-hide-search', get_template_directory_uri() . '/js/hide-search.js', array(), '20140404', true );
 	
-	wp_enqueue_script( 'sangeet-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20140328', true );
+	wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20140328', true );
 	
-	wp_enqueue_script( 'sangeet-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
-	wp_enqueue_script( 'sangeet-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20140401', true );
+	wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20140401', true );
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

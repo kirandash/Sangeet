@@ -77,7 +77,7 @@ function sangeet_entry_footer() {
 	);
 	
 	if ( ! is_single() ) {
-		echo '<span class="continue-reading"><a href="' . get_permalink() . '" title="' . __('Continue Reading ', 'sangeet') . get_the_title() . '" rel="bookmark">Continue Reading</a></span>';	
+		echo '<span class="continue-reading"><a href="' . get_permalink() . '" title="' . esc_html__('Continue Reading ', 'sangeet') . get_the_title() . '" rel="bookmark">'. esc_html__('Continue Reading ', 'sangeet') .'</a></span>';	
 	}
 }
 endif;
@@ -180,8 +180,8 @@ function sangeet_paging_nav() {
 		'current'  => $paged,
 		'mid_size' => 2,
 		'add_args' => array_map( 'urlencode', $query_args ),
-		'prev_text' => __( '<i class="fa fa-step-backward"></i>', 'sangeet' ),
-		'next_text' => __( '<i class="fa fa-step-forward"></i>', 'sangeet' ),
+		'prev_text' => '<i class="fa fa-step-backward"></i>',
+		'next_text' => '<i class="fa fa-step-forward"></i>',
         'type'      => 'list',
 	) );
 
@@ -189,7 +189,7 @@ function sangeet_paging_nav() {
 
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'sangeet' ); ?></h1>
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'sangeet' ); ?></h1>
 			<?php echo $links; ?>
 	</nav><!-- .navigation -->
 	<?php
@@ -215,11 +215,11 @@ function sangeet_post_nav() {
 	
     <nav class="navigation post-navigation" role="navigation">
         <div class="post-nav-box clear">
-            <h1 class="screen-reader-text"><?php _e( 'Post navigation', 'sangeet' ); ?></h1>
+            <h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'sangeet' ); ?></h1>
             <div class="nav-links">
                 <?php
-                previous_post_link( '<div class="nav-previous"><div class="nav-indicator">' . _x( 'Previous Post:', 'Previous post', 'sangeet' ) . '</div><h1>%link</h1></div>', '%title' );
-                next_post_link(     '<div class="nav-next"><div class="nav-indicator">' . _x( 'Next Post:', 'Next post', 'sangeet' ) . '</div><h1>%link</h1></div>', '%title' );
+                previous_post_link( '<div class="nav-previous"><div class="nav-indicator">' . esc_html_x( 'Previous Post:', 'Previous post', 'sangeet' ) . '</div>%link</div>', '%title' );
+                next_post_link(     '<div class="nav-next"><div class="nav-indicator">' . esc_html_x( 'Next Post:', 'Next post', 'sangeet' ) . '</div>%link</div>', '%title' );
                 ?>
             </div><!-- .nav-links -->
         </div><!-- .post-nav-box -->

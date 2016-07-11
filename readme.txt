@@ -1,38 +1,80 @@
-=== sangeet ===
+# Sangeet #
 
-Contributors: automattic
-Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
+Author: BG Web Agency
 
-Requires at least: 4.0
-Tested up to: 4.3.1
-Stable tag: 1.0.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, two-columns, right-sidebar, custom-header, custom-menu, editor-style, featured-images, post-formats, sticky-post, threaded-comments, translation-ready
 
-A starter theme called sangeet, or underscores.
+## Description ##
 
-== Description ==
+Sangeet is a theme built with an essence of music in it. Sangeet is a theme for music lovers who want to create a blog for themselves or the people who would like to give their website a touch of music.
 
-Hi. I'm a starter theme called sangeet, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+## Support ##
 
-== Installation ==
-	
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
+To get support, please contact us at http://bgwebagency.com/contact
 
-== Frequently Asked Questions ==
+If you have feature requests then please leave them under https://github.com/kirandash/Sangeet/issues
 
-= Does this theme support any plugins? =
+## Installation ##
 
-sangeet includes support for Infinite Scroll in Jetpack.
+You can install the theme through the WordPress installer under Themes-Install themes by searching for it.
+Alternatively you can download the file from here, unzip it and move the unzipped contents to the wp-content/themes folder
+of your WordPress installation. You will then be able to activate the theme.
 
-== Changelog ==
+## Frequently Asked Questions ##
 
-= 1.0 - May 12 2015 =
-* Initial release
+### How to add sidebar or footer widgets ###
 
-== Credits ==
+Go to appearance - widgets. Drag widgets from left side and drop into Footer widgets or Sidebar.
 
-* Based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2015 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
+### How to setup homepage without Blog ###
+
+Go to settings - reading and select A static page as option for front page display. Select any page as front page and a page called say "Blog" for blog page.
+
+### Where can I get support for the theme? ###
+
+Support is available at http://bgwebagency.com/contact
+
+### How to use menus ###
+
+For Menus: Use wordpress Menu system under Appearance tab.
+
+## Credits ##
+
+#### jQuery ####
+
+http://jquery.com
+
+#### Superfish ####
+URL:	https://github.com/joeldbirch/superfish
+
+License:	https://github.com/joeldbirch/superfish/blob/master/MIT-LICENSE.txt
+
+#### Oswald Google Font ####
+URL:	https://www.google.com/fonts/specimen/Oswald
+
+License:	http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+
+#### Font awesome ####
+URL:	http://fontawesome.io
+
+License:	http://fontawesome.io/license
+
+Fontawesome Fonts License: http://scripts.sil.org/OFL
+
+Fontawesome Code License: http://opensource.org/licenses/mit-license.html
+
+Fontawesome Documentation License: http://creativecommons.org/licenses/by/3.0/
+
+#### Navigation js ####
+URL:	https://gist.github.com/joshmcrty/926f522766a491042be1
+
+#### Underscores Starter Theme ####
+URL:	https://github.com/Automattic/_s
+
+#### Simone Theme ####
+URL:	https://wordpress.org/themes/simone
+
+#### Masonry ####
+URL:	http://masonry.desandro.com/#mit-license
+
+Thanks for downloading the Sangeet theme.
